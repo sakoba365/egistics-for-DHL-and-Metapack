@@ -1,7 +1,7 @@
 <?php
 require("pipeline/vendor/autoload.php");
-include "php_includes/php_v5_client.php";
-include "php_includes/requests.php";
+include "includes/php_v5_client.php";
+include "includes/requests.php";
 
 use League\Pipeline\Pipeline;
 
