@@ -32,7 +32,6 @@ class Request{
 			"Cache-Control: no-cache",
 			"Connection: keep-alive",
 			"Content-Type: application/json",
-			"Host: api.betsapi.com",
 			"cache-control: no-cache"
 		  ),
 		));
