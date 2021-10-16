@@ -18,7 +18,7 @@ class Init{
 class FindManifest{
 	
 	private $carrierCode = "DHLINT";
-	private $warehouseCode = "Dantherm";
+	private $warehouseCode = "";
 	private $transactionType = "delivery";
 	private $dateFrom = null;
 	private $dateTo =   null;
@@ -65,8 +65,8 @@ class FindManifestConsignments{
 }
 class DHLTrack{
 
-	private $username = "egisticsltdGB";
-	private $password = "C$7rA!8kK^1i";
+	private $username = "";
+	private $password = "";
     public function __invoke($payload)
     {
 		$carrierConsignmentCode = array();
@@ -86,7 +86,7 @@ class DHLTrack{
 						\"Request\": {
 							\"ServiceHeader\": {
 								\"MessageTime\": \"$message_time\",
-								\"MessageReference\": \"796ab310ba5311e38d9ffb21b7e57543\"
+								\"MessageReference\": \"XXXXXXXXXXXXXXXXXXXX\"
 							}
 						},
 						\"AWBNumber\": {
@@ -111,7 +111,7 @@ $pipeline = (new Pipeline)
 
 try{
 	$res = $pipeline->process(array("endpoint"=>"http://dm-api.metapack.com/api/5.x/services/ManifestService?wsdl", 
-									"username"=>"pramsay", "password"=>"Boston5858!"));
+									"username"=>"", "password"=>""));
 	print_r($res );
 } catch(LogicException $e) {
     print_r($e);
